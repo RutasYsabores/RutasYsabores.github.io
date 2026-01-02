@@ -1,0 +1,128 @@
+title: "Rutas y Sabores"
+description: "Viajes por Argentina, dónde comer y tips de ruta."
+permalink: /:year/:month/:day/:title/
+markdown: kramdown
+theme: null
+:root{
+  --bg:#0b1020;
+  --card:#121a33;
+  --txt:#eef1ff;
+  --muted:#b8c0ff;
+  --acc:#7aa2ff;
+  --line: rgba(255,255,255,.12);
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  color:var(--txt);
+  background:
+    radial-gradient(1200px 600px at 15% 0%, #15204a 0%, var(--bg) 60%),
+    radial-gradient(900px 600px at 100% 30%, #2a1a4a 0%, transparent 55%);
+}
+
+a{color:inherit; text-decoration:none}
+.wrap{max-width:1020px; margin:0 auto; padding:22px 16px}
+
+.topbar{
+  position:sticky; top:0; z-index:50;
+  backdrop-filter: blur(10px);
+  background: rgba(11,16,32,.55);
+  border-bottom:1px solid var(--line);
+}
+.topbar-inner{display:flex; align-items:center; justify-content:space-between; gap:14px}
+
+.brand{display:flex; gap:12px; align-items:center; min-width:220px}
+.logo{
+  width:46px; height:46px; border-radius:12px;
+  border:1px solid var(--line);
+  background: rgba(255,255,255,.06);
+  object-fit: cover;
+}
+.brand-name{font-weight:900; letter-spacing:.2px}
+.brand-tag{font-size:12px; color:rgba(255,255,255,.65); margin-top:2px}
+
+.menu{display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end}
+.menu a{
+  padding:8px 10px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  background: rgba(255,255,255,.06);
+  font-weight:700;
+  font-size:13px;
+}
+
+.card{
+  background: linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.03));
+  border:1px solid var(--line);
+  border-radius:20px;
+  padding:16px;
+  box-shadow: 0 22px 70px rgba(0,0,0,.35);
+}
+
+.hero{
+  margin-top:16px;
+  display:grid;
+  grid-template-columns: 1.35fr .65fr;
+  gap:14px;
+}
+@media (max-width:900px){ .hero{grid-template-columns:1fr} }
+
+h1{margin:8px 0 10px; font-size:clamp(28px,3.6vw,46px); line-height:1.05}
+p{margin:0 0 12px; color:rgba(255,255,255,.78); line-height:1.6}
+
+.btns{display:flex; gap:10px; flex-wrap:wrap; margin-top:10px}
+.btn{
+  display:inline-flex; gap:10px; align-items:center;
+  padding:12px 14px; border-radius:14px;
+  border:1px solid var(--line);
+  background: rgba(255,255,255,.06);
+  font-weight:800;
+}
+.btn.primary{
+  background: linear-gradient(135deg, var(--acc), #9b7bff);
+  border:0;
+  color:#0b1020;
+}
+
+.badge{
+  display:inline-block;
+  padding:7px 10px;
+  border-radius:12px;
+  background: rgba(122,162,255,.14);
+  border:1px solid rgba(122,162,255,.25);
+  color:#dbe6ff;
+  font-weight:900;
+  font-size:13px;
+}
+
+.grid{display:grid; gap:12px; grid-template-columns:repeat(3,1fr); margin-top:12px}
+@media (max-width:900px){ .grid{grid-template-columns:1fr} }
+
+.small{font-size:13px; opacity:.85}
+hr{border:0; border-top:1px solid var(--line); margin:18px 0}
+
+.postlist{display:grid; gap:12px; margin-top:12px}
+.postitem{
+  padding:14px;
+  border-radius:16px;
+  border:1px solid var(--line);
+  background: rgba(255,255,255,.05);
+}
+.postitem strong{display:block; margin-bottom:6px}
+
+.cover{
+  width:100%;
+  border-radius:18px;
+  border:1px solid var(--line);
+  overflow:hidden;
+  background: rgba(255,255,255,.04);
+}
+.cover img{width:100%; height:220px; object-fit:cover; display:block}
+@media (max-width:900px){ .cover img{height:180px} }
+
+.embed{position:relative; padding-top:56.25%; border-radius:16px; overflow:hidden; border:1px solid var(--line)}
+.embed iframe{position:absolute; inset:0; width:100%; height:100%}
+
+.footer{padding:20px 16px 40px; opacity:.65; font-size:13px}
